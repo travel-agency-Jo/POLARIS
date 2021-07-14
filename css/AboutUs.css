@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(244, 253, 253);
+    box-sizing:content-box;
   }
   .aboutus-background {
     margin: 0;
@@ -13,28 +14,43 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, 0);
     color: white;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-size: 90px;
   }
-  .overlay a {
-    text-decoration: none;
-    font-size: 25px;
-    font-family: "Montserrat", sans-serif, Arial, sans-serif;
+  .overlay2{
+    position: absolute;
+    top: 65%;
+    left: 45%;
+    transform: translate(-50%, -50%);
     color: white;
-    text-align: center;
-    margin-left: 180px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 90px;
+}
+.overlay2 a{
+text-decoration: none;
+font-size: 25px;
+font-family: "Montserrat", sans-serif, Arial, sans-serif;
+color: white;
+text-align: center;
+margin-left: 180px;
+}
+
+.overlay2 a:hover{
+text-decoration: underline;
+}
+ #ourteam {
+      margin-left: 140px;
+      display: flex;
+  
   }
-  .overlay a:hover {
-    text-decoration: underline;
+  #team2{
+    margin-left: 140px;
   }
-  #ourteam {
-    margin: 25px;
-    display: flex;
-  }
+
   #imgplane {
-    width: 130%;
+    width: 100%;
     height: 550px;
     object-fit: cover;
     top: 0;
@@ -278,3 +294,130 @@ body {
   #mybtn:hover {
   background-color: #1fd8aa;
   }
+
+
+
+  
+/*#region header*/
+.logo img{
+  width: 146px;
+  height: 87px;
+}
+.logo{
+  display: flex;
+  width: 100%;
+  justify-content:space-between;
+  height:100px;
+  /* padding: 20px 0; */
+  background-color: #FFFFFF;
+}
+.leftlogo{
+  margin-left: 100px;
+  display:flex
+}
+/*
+
+*/
+
+/*
+*/
+.leftlogo h1{
+  padding: 10% 0;
+  font-size:30px;
+  font-family:fantasy
+}
+.rightlogo{
+  margin-right: 180px;
+  padding:35px 0 ;
+}
+.vl{
+  border-left: 3px solid gray;
+  height: 20px;
+  display:inline-block;
+  margin:0 10px;
+}
+.rightlogo i{
+  margin: 0 10px;
+  color:#5190CD ;
+}
+.header2{
+   padding-left: 133px;
+   padding-right: 183px;
+   background-color: #162E44;
+   color: white;
+}
+.header2 nav{
+  display: flex;
+  width: 100%;
+  height:80px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  
+}
+.header2 nav .ul1{
+  display: flex;
+  justify-content: center;
+  
+}
+.header2 nav .ul1 i{
+  margin-left: 10px;
+
+}
+.header2 nav div{
+  text-align: center;
+}
+.header2 nav .ul1 li{
+  text-align: center;
+  padding:24px 15px;
+  margin-right:75px;
+  /* font-size: 16px; */
+}
+.header2 nav .ul1 li a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding-left: 15px;
+}
+.header2 nav .ul1 li:hover .inm-div1 {
+  width: 78.89px;
+}
+.header2 nav .ul1 li:hover .inm-div2 {
+  width: 80px;
+}
+.header2 nav .ul1 li:hover .inm-div3 {
+  width: 106.11px;
+}
+.header2 nav .ul1 li:hover .inm-div4 {
+  width: 119.40px;
+}
+.inm-div
+{
+  text-align: center;
+  height: 4px;
+  background-color: #01B3A7;
+  position: absolute;
+  top:0;
+  transition-property: width;
+  transition-duration: 0.5s;
+}
+.inm-div1{
+  width: 0;
+  /* display: none;    */
+}
+.inm-div2{
+  width: 0;
+}
+.inm-div3{
+width: 0;
+}
+.inm-div4{
+width: 0;
+}
+.header2 .ul2{
+  display: flex;
+}
+.header2 .ul2 li{
+  margin-left: 20px;
+}
+/*#endregion header*/
