@@ -47,7 +47,7 @@ function clickbutton(){
 let container=document.getElementById('wew')
 let informations=JSON.parse(localStorage.getItem('tours'))
 let btnsub=document.querySelector('button[id=submit-button]')
-
+let str=''
 
 function totalOfTotal(){
   let totalOfTot=informations.reduce((accumlator,currentvalue)=>{
@@ -100,7 +100,9 @@ if(localStorage.length > 0){
   })
   container.classList.add('container1')
     let tot=document.createElement('h5')
-    tot.textContent=`Total Price : ${totalOfTotal()}`
+    tot.classList.add('TotalPrice')
+    str='Total Price : '
+    tot.textContent=`${str}${totalOfTotal()}`
     container.appendChild(tot)
     container.insertBefore(tot,btnsub)
 }
@@ -122,6 +124,29 @@ function removeCountry(event){
   window.location.reload()
 }
 
+let btnCo=document.getElementsByClassName('couponBtn')
+let inpCo=document.querySelector('input[class=couponInp]')
+let stri=document.querySelector('h5[class=TotalPrice]')
+function Coupon(){
+  if(inpCo.value == '' || inpCo.value !=='jordan'){
+    inpCo.style.backgroundColor='red'
+    inpCo.value='Wrong Coupon'
+  } 
+  else{
+  str=`Total Price : ${totalOfTotal()}`
+  stri.innerHTML=str.strike()
+  let discount=totalOfTotal() * 0.15
+  let newval=totalOfTotal() - discount
+  let newDiscount=document.createElement('h5')
+  newDiscount.classList.add('discount')
+  newDiscount.textContent='Total Price after Discount : '+newval
+  container.insertBefore(newDiscount,btnsub)
+  }
+}
+
+inpCo.addEventListener('keydown',function(){
+  inpCo.style.backgroundColor='white'
+})
 
 
 
