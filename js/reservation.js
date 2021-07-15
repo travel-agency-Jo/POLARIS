@@ -101,7 +101,7 @@ if(localStorage.length > 0){
   container.classList.add('container1')
     let tot=document.createElement('h5')
     tot.classList.add('TotalPrice')
-    str='Total Price : '
+    str='Grand Total : '
     tot.textContent=`${str}${totalOfTotal()}`
     container.appendChild(tot)
     container.insertBefore(tot,btnsub)
@@ -135,11 +135,11 @@ function Coupon(){
   else{
   str=`Total Price : ${totalOfTotal()}`
   stri.innerHTML=str.strike()
-  let discount=totalOfTotal() * 0.15
+  let discount=totalOfTotal() * 0.25
   let newval=totalOfTotal() - discount
   let newDiscount=document.createElement('h5')
   newDiscount.classList.add('discount')
-  newDiscount.textContent='Total Price after Discount : '+newval
+  newDiscount.textContent='Grand Total after Discount : '+newval
   container.insertBefore(newDiscount,btnsub)
   }
 }
